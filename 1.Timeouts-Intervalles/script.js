@@ -102,3 +102,51 @@ const interval = setInterval(() => {
       }
     }
     var interval = window.setInterval(type, 1000);*/
+
+    //Bonus 1:
+    //Les éléments
+const cells = document.querySelectorAll('.cell');
+const startBtn = document.querySelector('#start');
+
+//Les variables globales
+let score = 0;
+let time = 10;
+let currentPos;
+
+// lorsqu'une cellule est cliquée, il vérifie si la taupe est là et met à jour le score si c'est le cas.
+cells.forEach(cell => {
+    cell.addEventListener('click', () => {
+        if (parseInt(cell.getAttribute('data-index')) === currentPos) {
+            score++;
+            /*scoreEl.innerHTML = score;*/
+        }
+    })
+});
+
+//Ajout d'un écouteur au bouton de démarrage
+startBtn.addEventListener('click', start);
+
+function start() {
+    let startGame = setInterval(() => { //boucler le jeu jusqu'à la fin du temps imparti
+        //vider toutes les cellules au début pour s'assurer qu'il n'y a pas de taupe en double. 
+        cells.forEach(cell => {
+            cell.innerHTML = '';
+        });
+
+        //remplir une cellule au hasard en ajoutant un div avec la classe de taupe
+        currentPos = Math.floor(Math.random() * 9);
+        cells[currentPos].innerHTML = '<div class="mole"></div>';
+
+        //vérification si le temps est écoulé
+        time--;
+        timeEl.innerHTML = time;
+        if (time === 0) { // le temps est écoulé
+            clearInterval(startGame); // arrêter la boucle
+            //nous utilisons setTimeout parce que sans cela, l'alerte s'exécute avant la mise à jour du temps.
+            setTimeout(() => {
+                alert('Game Done! Refresh to restart.');
+            }, 100);
+        }
+    }, 1000);
+}
+    
