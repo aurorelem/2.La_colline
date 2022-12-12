@@ -48,3 +48,57 @@ function heyYou() {
   times++;
 }*/
 
+
+//Exercice 1:                                                    
+
+/*const text = "prout";
+
+//La référence de la minuterie
+let timer;
+
+//L'index courant
+let i = 0;
+
+//On n'avez pas besoin d'une boucle for dans setInterval, la fonction elle-même est déjà appelée par itérations, traitez-la simplement comme une itération de boucle.
+function type() {
+
+  //Imprimer le caractère courant avec l'index courant
+  document.write(text[i]);
+  
+  //Augmente l'index
+  i++;
+  
+  //Si l'index atteint la longueur maximale du texte, arrête le timer
+  if(i >= text.length) 
+    clearInterval(timer);
+}
+
+//Passer la fonction, au lieu de l'appeler
+timer = setInterval(type, 1000);*/
+
+/*let str = 'prout'.split('');                               A regarder plus tard, fct mais je ne comprend pas encore tout
+
+const interval = setInterval(() => {
+  document.write(str[0]);
+  str = str.slice(1);
+  
+  if (!str.length) {
+    clearInterval(interval);
+  }
+}, 1000);*/
+
+
+//Autre possiblilité de résoudre l'exercice
+/*var text = "prout";
+    var i = 0;
+    var o = "";
+
+    function type() {
+      o += text[i];
+      document.write(o[i]);
+      i++;
+      if (i == text.length) {
+        clearInterval(interval);
+      }
+    }
+    var interval = window.setInterval(type, 1000);*/
