@@ -26,9 +26,18 @@ console.log(dateInThePast.getSeconds()) // 0*/
 
 //getTime() , cela vous donne une valeur spéciale appelée epoch, c'est le nombre de millisecondes depuis le 1er janvier 1970.
 
-let christmas1995 = new Date('1995-12-25')
+/*let christmas1995 = new Date('1995-12-25')
 let halloween2002 = new Date('2002-10-30')
 
 console.log((halloween2002.getTime() / 1000) + ' seconds have passed betweeen halloween 2002 and 1/1/1970')
-console.log((halloween2002.getTime() - christmas1995.getTime()) / (1000 * 60) + ' minutes have passed betweeen halloween 2002 and c')
+console.log((halloween2002.getTime() - christmas1995.getTime()) / (1000 * 60) + ' minutes have passed betweeen halloween 2002 and c')*/
 
+
+/*let halloween2002 = new Date('2002-10-30')
+let threeDays = 1000 * 60 * 60 * 24 * 3 // 1000 miliseconds * 60 seconds * 60 minutes * 24 hours * 3 days
+
+let threeDaysPastHalloween2002 = new Date(
+  halloween2002.getTime() + threeDays
+)
+
+console.log(threeDaysPastHalloween2002.toString())*/
