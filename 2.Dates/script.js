@@ -97,3 +97,8 @@ const days = (date_1, date_2) =>{
 }
 console.log(days(date_1, date_2) +" Hé ben, ça en fait des jours!! ");*/
 
+//Exercice 3:
+
+/*let today = new Date()
+today.setHours(80000)
+console.log(today)*/
