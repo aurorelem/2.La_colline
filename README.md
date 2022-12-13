@@ -7,5 +7,5 @@ J'ai aussi pris du temps pour combler mon retard en JS et je sais que je reviend
 
 ##2.Dates
 
-J'ai fais l'exercice 1 au matin qui m'a pris du temps et J'ai fais l'exercice deux.
+J'ai fais l'exercice 1 au matin qui m'a pris du temps et J'ai fais l'exercice 2 et 3(en partie).
 J'ai continué mon travail sur JS..
