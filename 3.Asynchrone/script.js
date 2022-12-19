@@ -88,20 +88,21 @@ fetchName("keith")
 //Exercice 1:
 
 let btn = document.querySelector('button')
-btn.addEventListener('click', ()=> fetch())
+btn.addEventListener("click", ()=> fetch())
 
-function fetch() {}
-fetch('data.json') 
+function fetch() {
+  fetch("data.json") 
     .then(response => response.json())
     .then((json) => {
-		let list = document.createElement('ul')// Créez un élément ul
-		document.body.appendChild(list)
-        for (let elem of json){                // Pour chaque élément de la réponse JSON, 
-        	let liElem = document.createElement("li");//créez une li 
-        	liElem.innerText = "My name is " + elem.name + " and I am " + elem.age + " year old, " 
-        	list.appendChild(liElem) //et ajoutez-la à la liste
+		let list = document.createElement("ul")// Créez un élément ul
+			document.body.appendChild(list)
+        	for (let elem of json){                // Pour chaque élément de la réponse JSON, 
+        		let liElem = document.createElement("li")//créez une li 
+        		liElem.innerText = "My name is " + elem.name + " and I am " + elem.age + " year old, " 
+        		list.appendChild(liElem) //et ajoutez-la à la liste
 		    }                
       })
     .catch((error) => {
 		console.log("There was an error!", error)
-  })
+    })
+}
