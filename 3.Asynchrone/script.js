@@ -86,3 +86,6 @@ fetchName("keith")
 	});*/
 
 //Exercice 1:
+
+fetch("data.json")
+    .then(res=>console.log(res))
