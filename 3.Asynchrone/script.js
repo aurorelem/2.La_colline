@@ -87,32 +87,21 @@ fetchName("keith")
 
 //Exercice 1:
 
-var btn = document.createElement("BUTTON");// Créer un élément <button>
-var t = document.createTextNode("CLICK ME");// Créer un noeud textuel
-btn.appendChild(t);                         // Ajouter le texte au bouton
-document.body.appendChild(btn);             // Ajoute la balise <button> à la balise <body>
+let btn = document.querySelector('button')
+btn.addEventListener('click', ()=> fetch())
 
-btn.addEventListener('click', function() {
-   fetch('texte.json')
-	.then((response) => response.text())
-	.then((text) => {
-		const p = document.createElement("p");
-		p.textContent = text;
-
-		document.body.appendChild(text);
-	})
-	.catch((error) => {
-		console.log("There was an error!", error);
-	});
-    fetch('texte.json') 
+function fetch() {}
+fetch('data.json') 
     .then(response => response.json())
-    .then(data => {
-      const list = document.createElement('ul');// Créez un élément ul
-        data.forEach(item => {// Pour chaque élément de la réponse JSON, créez une li et ajoutez-la à la liste
-        const listItem = document.createElement('li');
-        listItem.textContent = item;
-        list.appendChild(listItem);
-      });
-      document.body.appendChild(list);// Ajoutez la liste au document
-    });
-  });
+    .then((json) => {
+		let list = document.createElement('ul')// Créez un élément ul
+		document.body.appendChild(list)
+        for (let elem of json){                // Pour chaque élément de la réponse JSON, 
+        	let liElem = document.createElement("li");//créez une li 
+        	liElem.innerText = "My name is " + elem.name + " and I am " + elem.age + " year old, " 
+        	list.appendChild(liElem) //et ajoutez-la à la liste
+		    }                
+      })
+    .catch((error) => {
+		console.log("There was an error!", error)
+  })
