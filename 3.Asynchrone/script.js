@@ -87,5 +87,32 @@ fetchName("keith")
 
 //Exercice 1:
 
-fetch("data.json")
-    .then(res=>console.log(res))
+var btn = document.createElement("BUTTON");// Créer un élément <button>
+var t = document.createTextNode("CLICK ME");// Créer un noeud textuel
+btn.appendChild(t);                         // Ajouter le texte au bouton
+document.body.appendChild(btn);             // Ajoute la balise <button> à la balise <body>
+
+btn.addEventListener('click', function() {
+   fetch('texte.json')
+	.then((response) => response.text())
+	.then((text) => {
+		const p = document.createElement("p");
+		p.textContent = text;
+
+		document.body.appendChild(text);
+	})
+	.catch((error) => {
+		console.log("There was an error!", error);
+	});
+    fetch('texte.json') 
+    .then(response => response.json())
+    .then(data => {
+      const list = document.createElement('ul');// Créez un élément ul
+        data.forEach(item => {// Pour chaque élément de la réponse JSON, créez une li et ajoutez-la à la liste
+        const listItem = document.createElement('li');
+        listItem.textContent = item;
+        list.appendChild(listItem);
+      });
+      document.body.appendChild(list);// Ajoutez la liste au document
+    });
+  });
