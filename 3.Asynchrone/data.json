@@ -1,19 +1,19 @@
 [
     {
-        "Name": "Bob",
-        "Age": 32
+        "name": "Bob",
+        "age": 32
     },
     {
-        "Name": "Nathalie",
-        "Age": 52
+        "name": "Nathalie",
+        "age": 52
     },
     {
-        "Name": "Sarah",
-        "Age": 46
+        "name": "Sarah",
+        "age": 46
     },
     {
-        "Name": "Sindy",
-        "Age": 39
+        "name": "Sindy",
+        "age": 39
     }
 
 ]
