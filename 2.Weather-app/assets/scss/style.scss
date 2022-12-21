@@ -1,21 +1,66 @@
+//Color Theme Swatches in Hex 
+$Optio-1-hex: #96B3D9;
+$Optio-2-hex: #D5E7F2;
+$Optio-3-hex: #C9EBF2;
+$Optio-4-hex: #0B2624;
+$Optio-5-hex: #7EBFB3;
+
+//Font face                                 //demander pourquoi je n'arrive pas à afficher la police partout??
+@font-face {
+    font-family: 'Work Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+body {
+    background-color: $Optio-3-hex;
+    font-family: 'work sans', sans-serif;
 }
 
 .container {
+    
     height: 100vh;
     width: 100vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    /*background: rgb(251, 242, 133);
-    background: radial-gradient(
-      circle,
-      rgba(251, 242, 133, 0.6334908963585435) 0%,
-      rgba(224, 196, 91, 0.8407738095238095) 35%,
-      rgba(230, 224, 113, 1) 100%
-    );*/
+    align-items: center;
+    //justify-content: center;
+    margin-top: auto;
+    position: absolute;
+    
   }
+
+.title {
+        font-size: 3.125rem;
+        padding: .625rem;
+        margin: 1.875rem;
+        color: $Optio-4-hex;
+    }
+
+.city {
+    font-size: 1.875rem;
+    margin: 1.875rem;
+    padding: 0.125rem;
+    text-align: center;
+    color: $Optio-2-hex;
+    background-color: $Optio-5-hex;
+    border-style: none;
+} 
+
+.search {
+    font-size: 1.25rem;
+    margin: .9375rem;
+    padding: .125rem;
+    text-align: center;
+    color: #D5E7F2;
+    border-radius: .625rem;
+    border-style: none;
+    background-color: $Optio-1-hex;
+    
+}
+
+//border: 2px black solid;
