@@ -20,14 +20,14 @@ body {
 .cell {
   width: 150px;
   height: 150px;
-  border: 1px solid black;
+  border: 5px solid black;
   overflow: hidden;
 }
 
 .mole {
   width: 150px;
   height: 150px;
-  background-image: url("./mole.png");
+  background-image: url("./taupe.png");
   background-size: contain;
   -webkit-animation: appear 0.9s;
           animation: appear 0.9s;
