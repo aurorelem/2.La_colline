@@ -10,11 +10,36 @@ const weatherIcons = {
 
 //Ma cléf API
 const apiKey = "c29ada0ea1fe1a7641088d1fdb6c7478";
+//let cityinput = document.querySelector('cityinput');
+let button = document.querySelector('button');
+
+button.addEventListener("click", () => locate());
+
+async function locate() {
+  let cityimput = document.querySelector('cityinput').value;
+  let location = input;
+  console.log(location);  
+  try {
+    //Obtenir la localisation du pays
+    let response = await fetch(
+      "https://api.openweathermap.org/data/2.5/forecast?q=" +
+        city +
+        "&appid=" +
+        apiKey
+    );
+    let data = await response.json();
+    console.log(data);
+    localStorage.setItem(data, JSON.stringify(response));
+   
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 
 //Mes variables
-let city = document.querySelector('city');
 
-let icon = document.querySelector('icon');
+/*let icon = document.querySelector('icon');
 let temp = document.querySelector('temp');
 let desc = document.querySelector('desc');
 
@@ -43,4 +68,4 @@ async function locate() {
   } catch (error) {
     console.error(error);
   }
-}
+}*/
